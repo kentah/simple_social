@@ -38,7 +38,7 @@ class UserPosts(generic.ListView):
 
 
 class PostDetail(SelectRelatedMixin, generic.DetailView):
-    models = models.Post
+    model = models.Post
     select_related = ('user', 'group')
 
     def get_queryset(self):
