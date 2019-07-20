@@ -57,7 +57,8 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
         return super().form_valid(form)
 
 
-class DeletePost(LoginRequiredMixin, SelectRelatedMixin, generic.DetailView):
+class DeletePost(LoginRequiredMixin, SelectRelatedMixin, generic.DeleteView):
+    # TODO Make sure delete view both shows and deletes post. Posts aren't deleting
     model = models.Post
     select_related = ('user', 'group')
     success_url = reverse_lazy('posts:all')

@@ -37,10 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap3',                    # because of pip install bootstrap3
-    'accounts',
     'groups',
     'posts',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
